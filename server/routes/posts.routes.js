@@ -14,19 +14,17 @@ router.get('/', (req, res, next)=>{
     res.send('<h1>Soy el home</h1>')
 })
 
-router.get('post/', getPostByQuery)
+router.get('/post/', getPostByQuery)
 
-router.get('posts/:id', getPostById)
-
-router.get('post/', )
+router.get('/posts/:id', getPostById)
 
 router.get('/posts/', getPosts)
 
 router.post('/posts/', createPost)
 
-router.put('/posts/', updatePost)
+router.put('/posts/:id', updatePost)
 
-router.delete('/posts/', deletePost)
+router.delete('/posts/:id', deletePost)
 
 
 export default router

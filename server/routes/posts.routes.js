@@ -3,7 +3,7 @@ import {
     getPosts,
     getPostById,
     createPost,
-    updatePost,
+    updatePostById,
     deletePost,
     getPostByQuery,
 } from '../controllers/posts.controllers.js'
@@ -22,7 +22,7 @@ router.get('/posts/', getPosts)
 
 router.post('/posts/', createPost)
 
-router.put('/posts/:id', updatePost)
+router.put('/posts/:id', updatePostById)
 
 router.delete('/posts/:id', deletePost)
 

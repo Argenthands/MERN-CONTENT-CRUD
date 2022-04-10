@@ -1,7 +1,19 @@
-//nota, se extrae children de las props porque ese el nombre de la misma
+import { useState, createContext, useContext } from "react"
+
+// exporto un hoock con el contexto y el state
+const postContext = createContext()
+export const usePosts = () => {
+    const context = useContext(postContext)
+    return context
+}
+
 export const PostProvider = ({ children }) => {
-    console.log('container console log')
-    return <div>
+
+    const [posts, setPosts] = useState([])
+    return <postContext.Provider value={{
+        posts,
+        setPosts
+    }}>
         {children}
-    </div>
+    </postContext.Provider>
 }

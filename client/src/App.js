@@ -4,6 +4,9 @@ import {
 	PostForm,
 	NotFoundPage
 } from './pages';
+import {
+	NavBar
+} from './components'
 import './App.css';
 import { PostProvider } from './context/postContext';
 
@@ -11,6 +14,7 @@ function App() {
 	return (
 		<div className='MainContainer'>
 		<PostProvider>
+			<NavBar />
 			<Routes>
 
 				<Route path="/" element={<HomePage />} />

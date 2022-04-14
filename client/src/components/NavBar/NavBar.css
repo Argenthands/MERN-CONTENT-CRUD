@@ -1,0 +1,53 @@
+.NavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 90%;
+    height: 100%;
+}
+
+.Button__Menu {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px solid darkgoldenrod;
+    border-radius: 10px;
+    padding: 3.5px;
+    margin: 10px;
+}
+
+.Button__Menu:hover {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px solid black;
+    border-radius: 10px;
+    padding: 3.5px;
+    margin: 10px;
+}
+
+.active {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px solid darkgoldenrod;
+    border-radius: 10px;
+    padding: 3.5px;
+    margin: 10px;
+    background-color: white;
+}
+
+@media (max-width: 700px) {
+    .NavBar {}
+
+    .Button__Menu {}
+
+    .Button__Menu:hover {}
+
+    .active {}
+}

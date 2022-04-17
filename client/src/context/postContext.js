@@ -31,6 +31,10 @@ export const PostProvider = ({ children }) => {
         setPosts([...posts, res.data])
     }
 
+    const deletePost = id => {
+        console.log(id)
+    }
+
     useEffect(() => {
         getPosts()
     }, [])
@@ -41,6 +45,7 @@ export const PostProvider = ({ children }) => {
         setPosts,
         getPosts,
         createPost,
+        deletePost,
     }}>
         {children}
     </postContext.Provider>

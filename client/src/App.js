@@ -9,6 +9,7 @@ import {
 } from './components'
 import './App.css';
 import { PostProvider } from './context/postContext';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 				<Route path="*" element={<NotFoundPage />} />
 
 			</Routes>
+			<Toaster />
 		</PostProvider>
 		</div>
 	);

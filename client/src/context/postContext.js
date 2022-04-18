@@ -7,7 +7,9 @@ import {
 
 import {
     getPostsRequest,
-    createPostRequest
+    createPostRequest,
+    //updatePostRequest,
+    deletePostRequest
 } from "../api/posts"
 
 // exporto un hoock con el contexto y el state
@@ -31,8 +33,9 @@ export const PostProvider = ({ children }) => {
         setPosts([...posts, res.data])
     }
 
-    const deletePost = id => {
-        console.log(id)
+    const deletePost = async (id) => {
+        const res = await deletePostRequest(id)
+        console.log(res)
     }
 
     useEffect(() => {

@@ -1,15 +1,19 @@
 import toast from 'react-hot-toast'
-import { deletePost } from '../../context/postContext'
+import { usePosts } from '../../context/postContext'
 import './PostCard.css';
 
 export function PostCard({ post }) {
 
+    const { deletePost } = usePosts()
+
     const handleDelete = ({ title, description, _id }) => {
         toast((t) => (
             <div className='Message'>
-                <h1>Are you sure you want to delete this post? <strong>{_id}</strong></h1>
+                <h1>Are you sure you want to delete this post?</h1>
+                <p>title: <strong>{title}</strong></p>
+                <p>id: <strong>{_id}</strong></p>
                 <div>
-                    <button className='Button' onClick={() => { }}>Yes</button>
+                    <button className='Button' onClick={() => { deletePost(_id) }}>Yes</button>
                     <button className='Button' onClick={() => toast.dismiss(t.id)}>No</button>
                 </div>
             </div>

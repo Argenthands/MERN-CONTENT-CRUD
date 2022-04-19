@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    width: 90%;
-    height: 100%;
+    width: 50vh;
+    height: 10vh;
 }
 
 .Button__Menu {

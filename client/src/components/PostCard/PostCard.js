@@ -13,7 +13,10 @@ export function PostCard({ post }) {
                 <p>title: <strong>{title}</strong></p>
                 <p>id: <strong>{_id}</strong></p>
                 <div>
-                    <button className='Button' onClick={() => { deletePost(_id) }}>Yes</button>
+                    <button className='Button' onClick={() => {
+                        deletePost(_id)
+                        toast.dismiss(t.id)
+                    }}>Yes</button>
                     <button className='Button' onClick={() => toast.dismiss(t.id)}>No</button>
                 </div>
             </div>

@@ -14,17 +14,17 @@ import { Toaster } from 'react-hot-toast';
 function App() {
 	return (
 		<div className='MainContainer'>
-		<PostProvider>
-			<NavBar />
-			<Routes>
+			<PostProvider>
+				<NavBar />
+				<Routes>
 
-				<Route path="/" element={<HomePage />} />
-				<Route path="/new" element={<PostForm />} />
-				<Route path="*" element={<NotFoundPage />} />
+					<Route path="/" element={<HomePage />} />
+					<Route path="/new" element={<PostForm />} />
+					<Route path="*" element={<NotFoundPage />} />
 
-			</Routes>
-			<Toaster />
-		</PostProvider>
+				</Routes>
+				<Toaster />
+			</PostProvider>
 		</div>
 	);
 }

@@ -35,7 +35,9 @@ export const PostProvider = ({ children }) => {
 
     const deletePost = async (id) => {
         const res = await deletePostRequest(id)
-        console.log(res)
+        if(res.status === 200){
+            setPosts(posts.filter(post => post._id !== id))
+        }
     }
 
     useEffect(() => {
